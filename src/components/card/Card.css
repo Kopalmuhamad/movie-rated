@@ -1,0 +1,74 @@
+.cards {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 280px;
+  height: 630px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px var(--bg-300), -5px -5px 15px var(--bg-100);
+  overflow: hidden;
+}
+
+.cards.active {
+  height: fit-content;
+}
+
+.cards.active .bottom-view {
+  height: fit-content;
+  padding: 0.6rem 0.5rem;
+}
+
+.top-view {
+  height: 100%;
+  padding: 0.6rem 0.5rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.bottom-view {
+  height: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+.bottom-view p {
+  box-shadow: inset 5px 5px 15px var(--bg-300),
+    inset -5px -5px 15px var(--bg-100);
+  padding: 0.4rem;
+  border-radius: 4px;
+}
+
+.cards-images {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.cards-title {
+}
+
+.cards-rating {
+  font-size: var(--fs-s);
+  font-weight: var(--fw-normal);
+  margin-left: 0.2rem;
+}
+
+.button {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 5px 5px 15px var(--bg-300), -5px -5px 15px var(--bg-100);
+  font-weight: var(--fw-bold);
+  transition: 150ms all ease;
+  cursor: pointer;
+}
+
+.button:is(:hover, :active) {
+  box-shadow: inset 5px 5px 15px var(--bg-300),
+    inset -5px -5px 15px var(--bg-100);
+}

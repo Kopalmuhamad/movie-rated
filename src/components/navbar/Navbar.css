@@ -1,0 +1,102 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  padding: 1rem 0;
+  z-index: 99;
+  background-color: var(--bg-100);
+}
+
+.nav__container {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.nav__menu {
+  width: 100%;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* ToDo Styling */
+
+a {
+  color: var(--text-100);
+}
+
+.nav__logo {
+  font-size: var(--fs-l);
+  font-weight: var(--fw-bold);
+  color: var(--primary-100);
+}
+
+.nav__link.active {
+  font-weight: var(--fw-normal);
+  box-shadow: 5px 5px 15px var(--bg-300), -5px -5px 15px var(--bg-100);
+  padding: 0.6rem;
+  border-radius: 30px;
+}
+
+.nav__menu {
+  box-shadow: inset 5px 5px 15px var(--bg-300),
+    inset -5px -5px 15px var(--bg-100);
+  border-radius: 30px;
+  padding: 1rem 0.6rem;
+}
+
+/* ToDo Responsive */
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .nav__menu {
+    width: fit-content;
+  }
+
+  .nav__list {
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav__container {
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav__list {
+    gap: 2rem;
+  }
+
+  .nav__menu {
+    width: fit-content;
+  }
+
+  .nav__logo {
+    font-size: var(--fs-xl);
+  }
+
+  .nav__link {
+    font-size: var(--fs-s);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .nav__logo {
+    font-size: var(--fs-xxl);
+  }
+
+  .nav__link {
+    font-size: var(--fs-l);
+  }
+}
